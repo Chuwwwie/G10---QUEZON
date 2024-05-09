@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--work by Ferraren, Kerby B.-->
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>G10 QUEZON</title>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <button class="open">Click</button>
+
+      <div class="box">
+
+        <div class="imgBox">
+
+          <img src="./logo.png" alt="" />
+
+        </div>
+
+        <h2 class="title">CONGRATULATIONS G10 - Quezon s.y 2023-2024 🌟</h2>
+
+        <p>
+
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+
+          voluptatum velit soluta dicta neque doloremque quaerat vitae. Harum
+
+          maxime dolor totam voluptatum soluta, excepturi optio magni quis odio
+
+          qui facere.
+
+        </p>
+
+        <div class="btnContainer">
+
+          <button class="close">back</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="./confetti.min.js"></script>
+
+    <script>
+
+      const openbtn = document.querySelector(".open");
+
+      const modal = document.querySelector('.box');
+
+      const closeBtn = document.querySelector('.close');
+
+      openbtn.addEventListener("click", () => {
+
+        modal.classList.add('visible')
+
+        openbtn.classList.add('hidden');
+
+        const startit = () => {
+
+          setTimeout(function () {
+
+            confetti.start();
+
+          }, 1000);
+
+        };
+
+
+        const stopit = () => {
+
+          setTimeout(function () {
+
+            confetti.stop();
+
+          }, 5000);
+
+        };
+
+        startit();
+
+        stopit();
+
+      });
+
+      closeBtn.addEventListener('click', () => {
+
+        modal.classList.remove('visible')
+
+        openbtn.classList.remove('hidden');
+
+      })
+
+    </script>
+
+  </body>
+
+</html
